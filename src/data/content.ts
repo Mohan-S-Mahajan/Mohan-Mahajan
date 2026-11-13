@@ -66,7 +66,7 @@ export const PORTFOLIO_DATA = {
     name: "Mohan Mahajan",
     alias: "WHSP CONCIERGE",
     heisenbergAlias: "THE ARCHITECT",
-    role: "Creative Engineer & Full-Stack Developer",
+    role: "Software Architect & Full-Stack Developer",
     phone: "+1 (505) 503-4455",
     phoneNumeric: "+15055034455",
     email: "mohan@whsp.dev",
@@ -343,16 +343,16 @@ export const PORTFOLIO_DATA = {
   experience: [
     {
       period: "2024 — PRESENT",
-      role: "Frontend & Full Stack Engineer",
-      firm: "Product Engineering Studio",
-      location: "San Francisco, CA / Remote",
-      verdict: "Engineered scalable React components and optimized search visibility for live enterprise products.",
+      role: "Software Architect & Full-Stack Developer",
+      firm: "Black Angler",
+      location: "Remote / Hybrid",
+      verdict: "Spearheading system architecture, end-to-end full-stack development, and high-performance React systems.",
       achievements: [
-        "Developed and optimized React.js frontend components for a live internal CRM system utilized by 100+ active enterprise employees.",
-        "Served as technical consultant using analytics and search performance suites to boost website discoverability.",
-        "Created interactive educational and product modules focused on clean UI design, responsiveness, and frictionless user experience."
+        "Architected and engineered robust full-stack software systems with modern React, TypeScript, and high-performance server architectures.",
+        "Built and optimized production components and enterprise workflows utilized by active enterprise users.",
+        "Drove system scalability, technical architecture consulting, and search discoverability optimizations across digital platforms."
       ],
-      tags: ["React.js", "JavaScript", "TypeScript", "Tailwind CSS", "Analytics"]
+      tags: ["Software Architecture", "Full-Stack", "React 19", "TypeScript", "System Design"]
     },
     {
       period: "2023 — 2024",
