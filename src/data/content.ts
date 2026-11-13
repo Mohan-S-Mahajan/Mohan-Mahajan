@@ -506,8 +506,7 @@ export const PORTFOLIO_DATA = {
 
   socials: [
     { name: "Mohan Mahajan on LinkedIn", url: "https://www.linkedin.com/in/mohanmahajan/", icon: "Linkedin" },
-    { name: "Mohan Mahajan on GitHub", url: "https://github.com/Mohan-S-Mahajan", icon: "Github" },
-    { name: "Twitter / X", url: "https://twitter.com", icon: "Twitter" },
-    { name: "Behance", url: "https://behance.net", icon: "Palette" },
+    { name: "Mohan Mahajan on GitHub", url: "https://github.com/Mohan-S-Mahajan/", icon: "Github" },
+    { name: "Mohan Mahajan on Instagram", url: "https://www.instagram.com/mohan_mahajann/", icon: "Instagram" },
   ]
 };

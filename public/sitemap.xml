@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 01 // Home & Problem Concierge -->
   <url>
-    <loc>https://www.linkedin.com/in/mohanmahajan/</loc>
+    <loc>https://mohanmahajan.tech/</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 02 // Classified Case Files -->
   <url>
-    <loc>https://github.com/Mohan-S-Mahajan</loc>
+    <loc>https://mohanmahajan.tech/cases</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 03 // Technical Arsenal & Toolkit -->
+  <url>
+    <loc>https://mohanmahajan.tech/toolkit</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 04 // Track Record, Experience & Verdicts -->
+  <url>
+    <loc>https://mohanmahajan.tech/experience</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 05 // The Service Protocol & 5-Step Flow -->
+  <url>
+    <loc>https://mohanmahajan.tech/flow</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 06 // Capabilities, SLA & Offerings -->
+  <url>
+    <loc>https://mohanmahajan.tech/services</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 07 // Case Intake Terminal & Deposition Dispatch -->
+  <url>
+    <loc>https://mohanmahajan.tech/contact</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

@@ -3,7 +3,8 @@
 Official portfolio of **Mohan Mahajan** — Creative Technologist, Full-Stack Engineer, and Problem Concierge. Built with React 19, TypeScript, Tailwind CSS, and Framer Motion, inspired by the high-velocity aesthetic of **Better Call Saul** and **Youjin Jeong's WHSP problem concierge**.
 
 🔗 **LinkedIn**: [https://www.linkedin.com/in/mohanmahajan/](https://www.linkedin.com/in/mohanmahajan/)  
-💻 **GitHub**: [https://github.com/Mohan-S-Mahajan](https://github.com/Mohan-S-Mahajan)
+💻 **GitHub**: [https://github.com/Mohan-S-Mahajan/](https://github.com/Mohan-S-Mahajan/)  
+📷 **Instagram**: [https://www.instagram.com/mohan_mahajann/](https://www.instagram.com/mohan_mahajann/)
 
 ---
 
@@ -62,4 +63,5 @@ npm run build
 
 **Mohan Mahajan**
 - LinkedIn: [https://www.linkedin.com/in/mohanmahajan/](https://www.linkedin.com/in/mohanmahajan/)
-- GitHub: [https://github.com/Mohan-S-Mahajan](https://github.com/Mohan-S-Mahajan)
+- GitHub: [https://github.com/Mohan-S-Mahajan/](https://github.com/Mohan-S-Mahajan/)
+- Instagram: [https://www.instagram.com/mohan_mahajann/](https://www.instagram.com/mohan_mahajann/)

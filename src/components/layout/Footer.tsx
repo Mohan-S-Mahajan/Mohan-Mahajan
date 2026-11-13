@@ -263,13 +263,25 @@ export const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/Mohan-S-Mahajan"
+                    href="https://github.com/Mohan-S-Mahajan/"
                     target="_blank"
                     rel="me author noopener noreferrer"
                     title="Mohan Mahajan on GitHub"
                     className="hover:text-white transition-colors flex items-center gap-1"
                   >
                     <span>Mohan Mahajan (GitHub)</span>
+                    <ExternalLink className="h-2.5 w-2.5 text-zinc-600" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/mohan_mahajann/"
+                    target="_blank"
+                    rel="me author noopener noreferrer"
+                    title="Mohan Mahajan on Instagram"
+                    className="hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    <span>Mohan Mahajan (Instagram)</span>
                     <ExternalLink className="h-2.5 w-2.5 text-zinc-600" />
                   </a>
                 </li>
