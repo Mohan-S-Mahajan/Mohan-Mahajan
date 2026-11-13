@@ -1,0 +1,16 @@
+{
+  "name": "Mohan Mahajan — Creative Technologist & Full-Stack Engineer",
+  "short_name": "Mohan Mahajan",
+  "description": "Official portfolio and engineering case files of Mohan Mahajan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0908",
+  "theme_color": "#0A0908",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
