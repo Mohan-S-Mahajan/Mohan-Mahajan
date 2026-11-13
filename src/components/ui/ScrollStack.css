@@ -1,0 +1,89 @@
+.scroll-stack {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack--window {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack--window .scroll-stack__inner {
+  padding-inline: 0 !important;
+}
+
+.scroll-stack--contained {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(217, 119, 6, 0.3) transparent;
+}
+
+.scroll-stack--contained::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-stack--contained::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-stack--contained::-webkit-scrollbar-thumb {
+  background-color: rgba(217, 119, 6, 0.3);
+  border-radius: 9999px;
+}
+
+.scroll-stack__inner {
+  position: relative;
+  padding-inline: clamp(1rem, 4%, 3rem);
+}
+
+.scroll-stack__slot {
+  position: sticky;
+}
+
+.scroll-stack-card {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: #101014;
+  color: #fafafa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 -12px 40px -16px rgba(0, 0, 0, 0.7),
+    0 24px 48px -24px rgba(0, 0, 0, 0.8);
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+
+/* Full-Screen Page Stack Item for Homepage Scrolling */
+.scroll-stack-card--screen {
+  min-height: 100vh;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: #000;
+  border: none !important;
+  box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  transform-origin: 50% 15%;
+}
+
+.scroll-stack-card__shade {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #000;
+  opacity: var(--scroll-stack-dim, 0);
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+  z-index: 30;
+}
+

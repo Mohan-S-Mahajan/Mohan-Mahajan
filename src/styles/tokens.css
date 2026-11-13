@@ -1,0 +1,121 @@
+:root {
+  /* WHSP Problem Concierge Dark Theme (Exclusive) */
+  --ink: #000000;
+  --ink-2: #09090b;
+  --ink-3: #121215;
+  --courtroom-navy: #09090b;
+  --saul-gold: #ffffff;
+  --saul-red: #E8A598;
+  --cream: #FFFFFF;
+  --cream-muted: #A1A1AA;
+  --paper: #18181B;
+
+  /* WHSP Pastel Pill Colors */
+  --pill-salmon: #DF988D;
+  --pill-white: #FFFFFF;
+  --pill-lavender: #9FA8DA;
+  --pill-peach: #E29578;
+  --pill-slate: #8DA0B8;
+  --pill-cream: #EFE9E1;
+
+  /* Editorial Accents */
+  --amber-glow: #ffffff;
+  --hazmat: #27272a;
+  --blue-sky: #A3B1D1;
+  --element-green: #34D399;
+  --smoke: rgba(255, 255, 255, 0.02);
+
+  /* Fluid typography */
+  --fs-hero: clamp(3.5rem, 9vw, 8rem);
+  --fs-h2: clamp(2.25rem, 5vw, 4.5rem);
+  --fs-h3: clamp(1.35rem, 2.4vw, 2rem);
+  --fs-body: clamp(0.95rem, 1.1vw, 1.05rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  /* Shadows & outlines */
+  --glow-accent: 0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+/* JIMMY MODE: softer, warmer, legal-pad feel */
+html[data-mode="jimmy"] {
+  --ink: #0D0E11;
+  --ink-2: #16181C;
+  --courtroom-navy: #15224A;
+  --saul-gold: #E5A91E;
+  --cream: #FAF3E0;
+  --paper: #EFE4C2;
+  --amber-glow: #E29B00;
+  --hazmat: #CCA000;
+}
+
+/* HEISENBERG MODE: hyper-dark, menacing, nuclear amber (Breaking Bad Aesthetic) */
+html[data-mode="heisenberg"] {
+  --ink: #040405;
+  --ink-2: #09090c;
+  --courtroom-navy: #060b17;
+  --saul-gold: #FFA800;
+  --saul-red: #D91438;
+  --cream: #EDE5D2;
+  --amber-glow: #FF9400;
+  --hazmat: #FFB300;
+  --element-green: #1E663B;
+  --blue-sky: #63D0FF;
+  --glow-accent: 0 0 45px rgba(255, 148, 0, 0.5);
+}
+
+/* Duotone image styling specified in Section 8 */
+.duotone {
+  position: relative;
+  filter: grayscale(1) contrast(1.18) brightness(0.9);
+  overflow: hidden;
+}
+.duotone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--amber-glow);
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.duotone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(transparent 35%, rgba(0, 0, 0, 0.88));
+  pointer-events: none;
+}
+.duotone:hover::after {
+  opacity: 0.45;
+}
+
+/* Double-framed border signature */
+.frame-hazmat {
+  border: 2px solid var(--hazmat);
+  box-shadow: inset 0 0 0 1px rgba(242, 178, 26, 0.35);
+}
+
+/* Diagonal Hazard Stripes */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--hazmat),
+    var(--hazmat) 10px,
+    #0A0A0B 10px,
+    #0A0A0B 20px
+  );
+}
+
+/* Legal pad paper styling */
+.legal-pad-ruled {
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    #9BB2CE 28px
+  );
+  border-left: 2px solid #D64545; /* Red margin rule */
+}

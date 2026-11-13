@@ -1,0 +1,46 @@
+.luminous-type-root {
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: default;
+  color: var(--luminous-color, #ffffff);
+}
+
+/* Base dimmed layer */
+.luminous-base-layer {
+  display: block;
+  opacity: var(--luminous-base-opacity, 0.22);
+  transition: opacity 0.3s ease;
+  filter: contrast(95%);
+}
+
+/* Radiant luminous spotlight overlay layer */
+.luminous-spotlight-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: var(--luminous-color, #ffffff);
+  text-shadow:
+    0 0 24px rgba(251, 191, 36, 0.45),
+    0 0 45px rgba(217, 119, 6, 0.25);
+  
+  /* Radial gradient spotlight mask */
+  mask-image: radial-gradient(
+    circle var(--luminous-radius, 4.5em) at var(--luminous-x, 50%) var(--luminous-y, 50%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 35%,
+    rgba(0, 0, 0, 0.3) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--luminous-radius, 4.5em) at var(--luminous-x, 50%) var(--luminous-y, 50%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 35%,
+    rgba(0, 0, 0, 0.3) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  will-change: mask-image, -webkit-mask-image;
+}

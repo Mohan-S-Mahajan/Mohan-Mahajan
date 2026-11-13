@@ -1,0 +1,541 @@
+/* Better Call Saul x { whsp } Classified Case Docket 3D Coverflow Track */
+
+.docket-track-outer {
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(6px, 1.2vh, 16px) 0 clamp(4px, 1vh, 12px) 0;
+  position: relative;
+  z-index: 20;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.docket-cards-track {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(12px, 1.2vw, 18px);
+  will-change: transform;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.docket-card-slot {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Base Albuquerque Legal Docket Folder Card */
+.manila-docket-card {
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  cursor: pointer;
+  transform-origin: bottom center;
+  aspect-ratio: 941 / 540;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  transition: width 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.65s ease;
+}
+
+/* Active Card in Center Focus */
+.manila-docket-card.is-active-card {
+  width: clamp(620px, 49vw, 780px);
+  opacity: 1;
+  transform: translateY(-6px) scale(1);
+  filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 28px rgba(229, 169, 60, 0.32));
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Inactive Peripheral Cards (Optical Depth of Field) */
+.manila-docket-card.is-small-card {
+  width: clamp(250px, 20vw, 310px);
+  opacity: 0.65;
+  transform: translateY(0) scale(1);
+  filter: blur(3.2px) brightness(0.82) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.85));
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Inactive Card Hover State */
+.docket-card-slot:hover .manila-docket-card.is-small-card {
+  opacity: 0.92;
+  filter: blur(1.2px) brightness(0.95) drop-shadow(0 14px 30px rgba(0, 0, 0, 0.92));
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Docket Manila Folder Shell */
+.docket-folder-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FAF4E8 0%, #F5EAD4 40%, #EAD8B8 100%);
+  border: 1.5px solid #C8B28B;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.7), inset 0 -3px 6px rgba(100, 75, 40, 0.12);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(8px, 1vw, 14px) clamp(10px, 1.2vw, 18px);
+  color: #1A1815;
+  overflow: hidden;
+}
+
+/* Top Manila Folder Tab & Eyelet Bar */
+.docket-top-tab-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #D8C7A5;
+  padding-bottom: clamp(4px, 0.6vh, 8px);
+  margin-bottom: clamp(6px, 0.8vh, 10px);
+  flex-shrink: 0;
+}
+
+/* Left Brass Eyelet & Case Identifier */
+.docket-eyelet-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.docket-brass-grommet {
+  position: relative;
+  width: clamp(13px, 1.1vw, 16px);
+  height: clamp(13px, 1.1vw, 16px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #F0D58C 0%, #C59B27 60%, #7A5D18 100%);
+  border: 1.5px solid #634C17;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.docket-brass-grommet-hole {
+  width: 4.5px;
+  height: 4.5px;
+  border-radius: 50%;
+  background: #281D0B;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.docket-case-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(10.5px, 0.85vw, 12.5px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #7A5D2E;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.docket-jurisdiction-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(7.5px, 0.65vw, 9.5px);
+  color: #8C7B5D;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Forensic Red Rubber Stamp */
+.docket-rubber-stamp {
+  border: 1.5px dashed #C92A2A;
+  background: rgba(201, 42, 42, 0.08);
+  color: #C92A2A;
+  padding: 1.5px 7px;
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(7.5px, 0.68vw, 9.5px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: rotate(-2.5deg);
+  box-shadow: 0 1px 3px rgba(201, 42, 42, 0.18);
+  flex-shrink: 0;
+}
+
+/* Main Docket Content: 2-Column Split */
+.docket-main-content {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(10px, 1.2vw, 16px);
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* Left Column: Blueprint Schematic Viewport */
+.docket-left-media {
+  flex: 1.05;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1.5px solid #C8B693;
+  background: #ECE0CB;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.docket-img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docket-blueprint-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background: linear-gradient(to right, #8C6D37 1px, transparent 1px),
+              linear-gradient(to bottom, #8C6D37 1px, transparent 1px);
+  background-size: 14px 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.docket-project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(65%) contrast(118%) sepia(18%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.docket-card-slot:hover .docket-project-img {
+  transform: scale(1.05);
+  filter: grayscale(12%) contrast(115%) sepia(8%);
+}
+
+.docket-img-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 24, 21, 0.55) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Corner Technical Badges */
+.docket-badge-fig {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 4;
+  background: rgba(18, 18, 20, 0.9);
+  border: 1px solid rgba(229, 169, 60, 0.45);
+  padding: 1.5px 5px;
+  border-radius: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  color: #E5A93C;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.docket-badge-purity {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  z-index: 4;
+  background: rgba(247, 239, 225, 0.94);
+  border: 1px solid #C8B693;
+  padding: 1.5px 5px;
+  border-radius: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  color: #1A1815;
+  letter-spacing: 0.08em;
+}
+
+/* Right Column: Docket Narrative, Verdict & Actions */
+.docket-right-text {
+  flex: 1.15;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.docket-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+}
+
+.docket-card-title {
+  font-family: 'Bodoni Moda', 'DM Serif Display', Georgia, serif;
+  font-size: clamp(13px, 1.15vw, 17px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1A1815;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.docket-card-classification {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(10.5px, 0.8vw, 12.5px);
+  font-style: italic;
+  color: #5A4A32;
+  margin: 1px 0 0;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.docket-verdict-box {
+  background: rgba(234, 216, 184, 0.75);
+  border: 1px solid rgba(140, 109, 55, 0.45);
+  border-radius: 3px;
+  padding: clamp(3px, 0.5vh, 6px) clamp(5px, 0.7vw, 8px);
+  margin: clamp(3px, 0.6vh, 6px) 0;
+  font-size: clamp(9.5px, 0.75vw, 11px);
+  color: #3D2E14;
+  line-height: 1.3;
+}
+
+.docket-card-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(10.5px, 0.8vw, 12px);
+  line-height: 1.38;
+  color: #4A3E2E;
+  margin: 1px 0 clamp(2px, 0.5vh, 5px);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Small / Inactive Card Typography Scaling */
+.manila-docket-card.is-small-card .docket-card-title {
+  font-size: clamp(9px, 0.85vw, 11.5px);
+}
+
+.manila-docket-card.is-small-card .docket-card-classification {
+  font-size: clamp(7.5px, 0.7vw, 9.5px);
+}
+
+.manila-docket-card.is-small-card .docket-card-desc {
+  font-size: clamp(8px, 0.7vw, 9.5px);
+  line-height: 1.28;
+  -webkit-line-clamp: 2;
+  margin: 1px 0;
+}
+
+.manila-docket-card.is-small-card .docket-verdict-box {
+  display: none;
+}
+
+/* Evidence Tags Row */
+.docket-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 2px 0;
+}
+
+.docket-tag-pill {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  background: rgba(95, 75, 45, 0.12);
+  color: #3A2C1B;
+  border: 1px solid rgba(120, 95, 60, 0.35);
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.manila-docket-card.is-small-card .docket-tags-row {
+  gap: 2.5px;
+  margin: 1px 0;
+}
+
+.manila-docket-card.is-small-card .docket-tag-pill {
+  font-size: 6px;
+  padding: 1px 4px;
+}
+
+/* Action Buttons (Active Card Only) */
+.docket-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 4px;
+  border-top: 1px dashed rgba(140, 109, 55, 0.3);
+}
+
+.manila-docket-card.is-small-card .docket-card-actions {
+  display: none !important;
+}
+
+.docket-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.docket-btn-code {
+  background: #1A1815;
+  color: #F7EFE1;
+  border: 1px solid #4A3F2C;
+}
+
+.docket-btn-code:hover {
+  background: #000;
+  color: #FFF;
+  border-color: #E5A93C;
+  transform: translateY(-1.5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.docket-btn-demo {
+  background: #C59B27;
+  color: #1A1815;
+  border: 1px solid #8C6D37;
+}
+
+.docket-btn-demo:hover {
+  background: #E5A93C;
+  color: #000;
+  border-color: #A88544;
+  transform: translateY(-1.5px);
+  box-shadow: 0 3px 12px rgba(197, 155, 39, 0.45);
+}
+
+.docket-btn-dossier {
+  background: rgba(229, 213, 186, 0.8);
+  color: #3D2E14;
+  border: 1px solid rgba(140, 109, 55, 0.4);
+}
+
+.docket-btn-dossier:hover {
+  background: #8C6D37;
+  color: #FFF;
+  transform: translateY(-1.5px);
+}
+
+/* Mobile Responsive Mode (< 900px) */
+@media (max-width: 900px) {
+  .docket-track-outer {
+    padding: 6px 0;
+  }
+
+  .docket-cards-track {
+    gap: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    transform: translateZ(0) !important;
+    transition: none !important;
+  }
+
+  .docket-card-slot {
+    width: 100% !important;
+    display: none;
+    justify-content: center;
+  }
+
+  .docket-card-slot.is-active-slot {
+    display: flex !important;
+  }
+
+  .manila-docket-card.is-active-card {
+    width: 100% !important;
+    max-width: 400px;
+    height: auto !important;
+    min-height: 480px;
+    aspect-ratio: auto;
+    transform: none !important;
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.95));
+  }
+
+  .docket-main-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .docket-left-media {
+    width: 100%;
+    height: 180px !important;
+    flex: none;
+  }
+
+  .docket-right-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .docket-card-title {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .docket-card-classification {
+    font-size: 10.5px;
+    white-space: normal;
+  }
+
+  .docket-verdict-box {
+    display: block;
+    font-size: 10px;
+  }
+
+  .docket-card-desc {
+    font-size: 11px;
+    line-height: 1.35;
+    -webkit-line-clamp: 2;
+  }
+
+  .docket-card-actions {
+    display: flex !important;
+    width: 100%;
+  }
+
+  .docket-action-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 8px;
+    font-size: 9.5px;
+  }
+}
